@@ -53,9 +53,6 @@ html, body {
 	border: 1px solid #014aaa;
 }
 
-.padding {
-	padding-bottom: 1rem;
-}
 
 .welcome {
 	width: 75%;
@@ -63,11 +60,17 @@ html, body {
 	padding-top: 1rem;
 
 }
+hr {
+	border-top: 2px solid #b4b4b4;
+	width: 80%;
+	padding-top: 5px;
+	margin-top: 10px;
+	margin-bottom: 0.5rem;
+}
 
 .welcome hr {
 	border-top: 2px solid #b4b4b4;
-	width: 95%;
-	margin-top: 0;
+	width: 20%;
 	margin-bottom: 0.5rem;
 }
 
@@ -104,13 +107,15 @@ html, body {
 /*---Firefox Bug Fix --*/
 
 .img-border {
-	border: 5px solid rgb(0, 0, 0);
 	border-radius: 15px;
-  	border: 5px solid #003c8a;
+  	border: 5px solid  #b4b4b4;
   	width: 160px;
 	max-width: 50%;
 }
 
+.creator-padding {
+	margin-left: 100px;
+}
 .center {
 	display: block;
 	margin-left: auto;
@@ -137,9 +142,7 @@ html, body {
 
 
 
-
-
-a {
+a{
 	color: #0052aa;
     text-decoration: none !important;
 }
