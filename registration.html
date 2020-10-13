@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comercio Registration</title>
+    <link rel = "icon" href =
+    "https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg"
+    type = "image/x-icon"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+    <script src='validate.js'></script>
+</head>
+<body>
+
+
+    <!-- Navigation Bar -->
+    <nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg" width="30" height="30" alt="">
+            Comercio
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    <br>
+    <div class="container">
+        <div class="header"><h2>Comercio Registration</h2></div>
+
+        <form id="form" class="reg-form">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" placeholder="ABC123" id="username" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" placeholder="abc@srmist.edu.in" id="email" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="phone">Phone</label>
+                <input type="text" placeholder="xxxx-xxx-xxx" id="phone" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" placeholder="******" id="password"/>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">Re-Type Password</label>
+                <input type="password" placeholder="******" id="password2"/>
+                <small>Error message</small>
+            </div>
+            <button type="button" onclick="checkInputs()">Create Account</button>
+            <p class="message"> Already Registered? <a href='#'>Login</a></p>
+        </form>
+    </div>
+
+</body>
+</html>
