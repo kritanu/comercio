@@ -107,7 +107,7 @@ hr {
 /*---Firefox Bug Fix --*/
 
 .img-border {
-	border-radius: 15px;
+	border-radius: 5px;
   	border: 5px solid  #b4b4b4;
   	width: 160px;
 	max-width: 50%;
@@ -201,7 +201,7 @@ figure {
 } */
 
 .container {
-	border-radius: 15px;
+	border-radius: 5px;
 	background-color: #F8F8F8;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	overflow: hidden;
@@ -246,7 +246,7 @@ figure {
 
 .form-control input {
 	border: 2px solid #f0f0f0;
-	border-radius: 15px;
+	border-radius: 5px;
 	display: block;
 	font-family: inherit;
 	font-size: 14px;
@@ -283,7 +283,7 @@ figure {
 .reg-form button {
 	background-color: #0077ff;
 	border: 2px solid #00428d;
-	border-radius: 15px;
+	border-radius: 5px;
 	color: #fff;
 	display: block;
 	font-family: inherit;
