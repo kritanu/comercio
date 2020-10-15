@@ -9,8 +9,17 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;  
 	color: #222;
+}
+
+body {
+	background-image: url("finalback.png");
+	min-height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }
 
 
@@ -108,7 +117,7 @@ hr {
 
 .img-border {
 	border-radius: 5px;
-  	border: 5px solid  #b4b4b4;
+  	border: 2px solid  #b4b4b4;
   	width: 160px;
 	max-width: 50%;
 }
@@ -213,8 +222,8 @@ figure {
 	border-bottom: 1px solid #f0f0f0;
 	/* background-color: #f0f0f0; */
 	/* padding: 20px 40px; */
-	padding-top: 0.3rem;
-	padding-bottom: 0.3rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	text-align: center;
 }
 
