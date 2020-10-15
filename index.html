@@ -12,7 +12,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
-    <script src='validate.js'></script>
+    <script src='js/scroll.js'></script>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
     <!-- Navigation Bar -->
     <nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
             <img src="https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg" width="30" height="30" alt="">
             Comercio
         </a>
@@ -53,16 +53,18 @@
     <!-- Carousel -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="srm-univ.jpg" width="100%" height= auto alt="">
+            <img src="css/srm-univ.jpg" width="100%" height= auto alt="">
             <div class="carousel-caption">
-                <h1 class="display-22">Comercio</h1>
+                <h1 class="display-2">Comercio</h1>
                 <button type="button" class="btn btn-outline-light btn-lg"><a href='registration.html'>Registration</a></button>
+                <br><br>
+                <a class="scrollTo" href="#desc-start"><i class="fas fa-arrow-circle-down"></i></a>
             </div>
         </div>
     </div>
 
     <!-- Welcome Section -->
-    <div class="container-fluid padding">
+    <div id="desc-start" class="container-fluid padding">
         <div class="row welcome text-center">
             <div class="col-12">
                 <h1 class="display-4">Built for SRM.</h1>
@@ -116,15 +118,6 @@
     <div class="row text-center">
         <div class="col-md-6">
             <hr class="light">
-            <img src="https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg" width="30" height="30" alt="">
-            <hr class="light">
-            <p>+91 7977982445</p>
-            <p>kritanu82@gmail.com</p>
-            <p>SRM Univ, Kattankulathur</p>
-            <p>Chennai 603203</p>
-        </div>
-        <div class="col-md-6">
-            <hr class="light">
             <h5>Meeting Points</h5>
             <hr class="light">
             <p>M1 - UB Red Pipe</p>
@@ -132,9 +125,43 @@
             <p>M3 - Java Entry</p>
             <p>M4 - Tech Park Stairs</p>
         </div>
+        <div class="col-md-6">
+            <hr class="light">
+            <img src="https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg" width="30" height="30" alt="">
+            <hr class="light">
+            <p>+91 7977982445</p>
+            <p>kritanu82@gmail.com</p>
+            <p>SRM Univ, Kattankulathur</p>
+            <p>Chennai 603203</p>
+        </div>
     </div>
     </div>
     </footer>
+
+    <!-- Scrolling to main desc -->
+    <script type="text/javascript">
+        function scrollTo(id) {
+            if ($(id).length) {
+                var getOffset = $(id).offset().top;
+                var targetDistance = 20;
+                $('html,body').animate({
+                    scrollTop: getOffset - targetDistance
+                }, 500);
+            }
+        }
+        
+        $('.scrollTo').click(function() {
+            var getElem = $(this).attr('href');
+            var targetDistance = 20;
+            if ($(getElem).length) {
+                var getOffset = $(getElem).offset().top;
+                $('html,body').animate({
+                    scrollTop: getOffset - targetDistance
+                }, 500);
+            }
+            return false;
+        });
+    </script>
 
 </body>
 </html>
