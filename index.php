@@ -1,8 +1,12 @@
+<?php
+ include_once 'header.php';
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comercio Registration</title>
+    <title>Comercio PHP</title>
     <link rel = "icon" href =
     "https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg"
     type = "image/x-icon"> 
@@ -15,50 +19,13 @@
 </head>
 <body>
 
-
-    <!-- Navigation Bar -->
-    <nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-            <img src="https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg" width="30" height="30" alt="">
-            Comercio
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="registration.html">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Items</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    </nav>
-
-
     <!-- Carousel -->
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="css/srm-univ.jpg" width="100%" height= auto alt="">
             <div class="carousel-caption">
                 <h1 class="display-2">Comercio</h1>
-                <button type="button" class="btn btn-outline-light btn-lg"><a href='registration.html'>Registration</a></button>
+                <button type="button" class="btn btn-outline-light btn-lg"><a href='registration.php'>Registration</a></button>
                 <br><br>
                 <a class="scrollTo" href="#desc-start"><i class="fas fa-arrow-circle-down"></i></a>
             </div>

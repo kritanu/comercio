@@ -249,8 +249,8 @@ figure {
 
 .form-control {
 	background-color: #F8F8F8;
-	margin-bottom: 10px;
-	padding-bottom: 20px;
+	/* margin-bottom: 10px; */
+	/* padding-bottom: 20px; */
 	border: #fff;
 	position: relative;
 }
