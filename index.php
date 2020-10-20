@@ -22,7 +22,7 @@
     <!-- Carousel -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="css/srm-univ.jpg" width="100%" height= auto alt="">
+            <img src="img/srm-univ.jpg" width="100%" height= auto alt="">
             <div class="carousel-caption">
                 <h1 class="display-2">Comercio</h1>
                 <button type="button" class="btn btn-outline-light btn-lg"><a href='registration.php'>Registration</a></button>
@@ -76,7 +76,7 @@
             <!-- </div> -->
             </div>
             <div class="col-lg-6">
-                <img src="face.jpg" class="img-fluid center img-border">
+                <img src="img/face.jpg" class="img-fluid center img-border">
             </div>
         </div>
     </div>
