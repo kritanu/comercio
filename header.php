@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+?>   
+    
+    
     <!-- Navigation Bar -->
     <nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
     <div class="container-fluid">
@@ -14,16 +20,26 @@
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="registration.php">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#">Items</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Services</a>
+                </li>
+                <?php
+                  if (isset($_SESSION["useruid"])) {
+                      echo "<li><a href='profile.php>Profile Page</a></li>";
+                      echo "<li><a href='logout.php>Log Out</a></li>";
+                  }
+                  else {
+                    echo "<li><a href='registration.php'>Sign Up</a></li>";
+                    echo "<li><a href='login.php'>Login</a></li>";
+                  }
+                ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="registration.php">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact Us</a>

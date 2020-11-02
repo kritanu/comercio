@@ -1,5 +1,5 @@
 <?php
- include_once 'header.php';
+include_once 'header.php';
 ?>
 
 <html lang="en">
@@ -16,12 +16,10 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
-    <script src='js/validate.js'></script>
 </head>
 <body>
     <div class="container">
         <div class="header"><h2>Registration</h2></div>
-
         <form id="form" class="reg-form" action="includes/registration.inc.php" method="post">
             <div class="form-control">
                 <label for="username">Username</label>
@@ -48,8 +46,33 @@
                 <input type="password" placeholder="******" id="password2" name="password2" />
                 <small>Error message</small>
             </div>
-            <button type="submit" name="submit" onclick="checkInputs()">Create Account</button>
+            <button type="submit" name="submit">Create Account</button>
             <p class="message"> Already Registered? <a href='#'>Login</a></p>
+            <br>
+            <div>
+            <?php
+                if(isset($_GET["error"])) {
+                    if($_GET["error"] == "emptyinput") {
+                        echo "<p> Fill the fields!</p>";
+                    }
+                    if($_GET["error"] == "invaliduid") {
+                        echo "<p>Enter a valid username.</p>";
+                    }
+                    if($_GET["error"] == "emptyinput") {
+                        echo "<p>Enter a valid email.</p>";
+                    }
+                    if($_GET["error"] == "emptyinput") {
+                        echo "<p>Passwords don't match.</p>";
+                    }
+                    if($_GET["error"] == "stmtfailed") {
+                        echo "<p> Something went wrong.</p>";
+                    }
+                    if($_GET["error"] == "none") {
+                        echo "<p> You have Registered.</p>";
+                    }
+                }
+            ?>
+            </div>
         </form>
     </div>
 

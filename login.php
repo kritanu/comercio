@@ -26,17 +26,27 @@
         <form id="form" class="reg-form" action="includes/registration.inc.php" method="post">
             <div class="form-control">
                 <label for="email">Email</label>
-                <input type="email" placeholder="abc@srmist.edu.in" id="email" />
+                <input type="email" placeholder="abc@srmist.edu.in" id="email" name="email" />
                 <small>Error message</small>
             </div>
             <div class="form-control">
                 <label for="password">Password</label>
-                <input type="password" placeholder="******" id="password"/>
+                <input type="password" placeholder="******" id="password" name="password"/>
                 <small>Error message</small>
             </div>
-            <button type="button" onclick="checkInputs()">Login</button>
+            <button type="submit" name="submit">Login</button>
             <p class="message"> New User? <a href='#'>Register</a></p>
         </form>
+        <?php
+                if(isset($_GET["error"])) {
+                    if($_GET["error"] == "emptyinput") {
+                        echo "<p> Fill the fields!</p>";
+                    }
+                    if($_GET["error"] == "wronglogin") {
+                        echo "<p>Incorrect Login.</p>";
+                    }
+                }
+            ?>
     </div>
 
 </body>
