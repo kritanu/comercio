@@ -48,7 +48,7 @@ function passwordMatch($password, $password2) {
 
 
 function uidExists($conn, $username, $email) {
-    $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
+    $sql = "SELECT * FROM users WHERE usersName = ? OR usersEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../registration.php?error=stmtfailed");
@@ -58,7 +58,6 @@ function uidExists($conn, $username, $email) {
     mysqli_stmt_execute($stmt);
 
     $resultData = mysqli_stmt_get_result($stmt);
-
 
     if($row = mysqli_fetch_assoc($resultData)) {
         return $row;
@@ -98,9 +97,9 @@ function createUser($conn, $username, $email, $phone, $password) {
 }
 
 
-function emptyInputLogin($email, $password) {
+function emptyInputLogin($username, $password) {
     $result;
-    if(empty(empty($email) || empty($password))) {
+    if(empty($username) || empty($password)) {
         $result = true;
     }
     else {
@@ -121,14 +120,14 @@ function loginUser($conn, $username, $password) {
     $checkPassword = password_verify($password, $hashedPassword);
 
     if($checkPassword === false) {
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../login.php?error=incorrectpass");
         exit();
     }
 
     else if($checkPassword === true) {
         session_start();
         $_SESSION["userid"] = $uidExists["usersId"];
-        $_SESSION["useruid"] = $uidExists["usersUId"];
+        $_SESSION["username"] = $uidExists["usersName"];
         header("location: ../index.php");
         exit();
     }

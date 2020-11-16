@@ -28,10 +28,10 @@ if(isset($_POST["submit"])) {
         header("location: ../registration.php?error=pwdnomatch");
         exit();
     }
-    // if(uidExists($conn, $username, $email) !== false) {
-    //     header("location: ../registration.php?error=usernametaken");
-    //     exit();
-    // }
+    if(uidExists($conn, $username, $email) !== false) {
+       header("location: ../registration.php?error=usernametaken");
+       exit();
+    }
     createUser($conn,$username, $email, $phone, $password);
 
 }

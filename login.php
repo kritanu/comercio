@@ -23,10 +23,10 @@
     <div class="container">
         <div class="header">
             <h2>Login</h2></div>
-        <form id="form" class="reg-form" action="includes/registration.inc.php" method="post">
+        <form id="form" class="reg-form" action="includes/login.inc.php" method="post">
             <div class="form-control">
-                <label for="email">Email</label>
-                <input type="email" placeholder="abc@srmist.edu.in" id="email" name="email" />
+                <label for="username">Username</label>
+                <input type="text" placeholder="ABC123" id="username" name="username" />
                 <small>Error message</small>
             </div>
             <div class="form-control">
@@ -36,17 +36,22 @@
             </div>
             <button type="submit" name="submit">Login</button>
             <p class="message"> New User? <a href='#'>Register</a></p>
-        </form>
-        <?php
+            <div>
+            <?php
                 if(isset($_GET["error"])) {
-                    if($_GET["error"] == "emptyinput") {
+                    if($_GET["error"] == "emptyinputfunc") {
                         echo "<p> Fill the fields!</p>";
                     }
                     if($_GET["error"] == "wronglogin") {
                         echo "<p>Incorrect Login.</p>";
                     }
+                    if($_GET["error"] == "incorrectpass") {
+                        echo "<p>Incorrect Password.</p>";
+                    }
                 }
             ?>
+            </div>
+        </form>
     </div>
 
 </body>

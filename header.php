@@ -1,8 +1,6 @@
 <?php
-
     session_start();
-?>   
-    
+?>  
     
     <!-- Navigation Bar -->
     <nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
@@ -20,30 +18,24 @@
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Items</a>
+                    <a class="nav-link" href="items.php">Items</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="services.php">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact Us</a>
                 </li>
                 <?php
-                  if (isset($_SESSION["useruid"])) {
-                      echo "<li><a href='profile.php>Profile Page</a></li>";
-                      echo "<li><a href='logout.php>Log Out</a></li>";
+                  if (isset($_SESSION["username"])) {
+                    echo "<li class='nav-item'><a class='nav-link' href='profile.php'>Profile</a></li>";
+                    echo "<li class='nav-item'><a class='nav-link' href='includes/logout.inc.php'>Log Out</a></li>";
                   }
                   else {
-                    echo "<li><a href='registration.php'>Sign Up</a></li>";
-                    echo "<li><a href='login.php'>Login</a></li>";
+                    echo "<li class='nav-item'><a class='nav-link' href='registration.php'>Register</a></li>";
+                    echo "<li class='nav-item'><a class='nav-link' href='login.php'>Login</a></li>";
                   }
                 ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="registration.php">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
             </ul>
         </div>
     </div>

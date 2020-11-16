@@ -58,17 +58,20 @@ include_once 'header.php';
                     if($_GET["error"] == "invaliduid") {
                         echo "<p>Enter a valid username.</p>";
                     }
-                    if($_GET["error"] == "emptyinput") {
+                    if($_GET["error"] == "invalidemail") {
                         echo "<p>Enter a valid email.</p>";
                     }
-                    if($_GET["error"] == "emptyinput") {
+                    if($_GET["error"] == "pwdnomatch") {
                         echo "<p>Passwords don't match.</p>";
                     }
                     if($_GET["error"] == "stmtfailed") {
                         echo "<p> Something went wrong.</p>";
                     }
+                    if($_GET["error"] == "usernametaken") {
+                        echo "<p> This user in already registered.</p>";
+                    }
                     if($_GET["error"] == "none") {
-                        echo "<p> You have Registered.</p>";
+                        echo "<p>Successfully Registered.</p>";
                     }
                 }
             ?>

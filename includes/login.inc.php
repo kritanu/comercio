@@ -1,14 +1,14 @@
 <?php
 
 if(isset($_POST["submit"])) {
-    $username = $_POST["email"];
+    $username = $_POST["username"];
     $password = $_POST["password"];
 
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if(emptyInputLogin($email, $password) !== false) {
+    if(emptyInputLogin($username, $password) !== false) {
         header("location: ../login.php?error=emptyinput");
         exit();
     }
@@ -18,6 +18,6 @@ if(isset($_POST["submit"])) {
 }
 
 else {
-    header("location: ../login.php")
+    header("location: ../login.php");
     exit();
 }
