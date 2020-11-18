@@ -20,6 +20,38 @@
 <body>
 <div class="container" style="width:600px;">
         <div class="header"><h2>Meetings</h2></div>
+        <br>
+        <div class='text-center'>
+        <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'comercio');
+        // Check connection
+        if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $user = $_SESSION['username'];
+        $sql = "SELECT * FROM meeting ORDER BY MeetingPoint DESC";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            if ($user == $row['seller']) {
+                echo "<h4> Item: " . $row["itemName"] . "<br>"
+                . "Users Bid: " . $row["usersBid"]. "<br>" 
+                . "User: " . $row["usersName"] ."<br>" 
+                . "Mob: +91 " . $row["usersPhone"]. "<br>" 
+                . "Email: " . $row["usersEmail"]. "</h4>".
+                "Meeting Point: M" . (fmod($row["meetingPoint"], 4)+1) . "<br><br>";
+            }
+        }
+        } else {
+        echo "0 results";
+        }
+
+        mysqli_close($conn);
+        ?>
+        </div>
     </div>
     <br><br>
     <!-- Footer -->

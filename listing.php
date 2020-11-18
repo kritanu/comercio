@@ -19,7 +19,7 @@
 </head>
 <body>
 
-    <div class="container" style="width:800px;">
+    <div class="container" style="width:600px;">
         <div class="header">
             <h2>Listings</h2>
         </div>
