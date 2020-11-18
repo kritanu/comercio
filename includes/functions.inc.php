@@ -157,3 +157,33 @@ function addItem($conn, $username, $email, $phone, $itemname, $itemdesc, $itempr
     header("location: ../items.php?error=none");
     exit();
 }
+
+function emptyInputMatch($bid) {
+    $result;
+    if(empty($bid)) {
+        $result = true;
+    }
+    else {
+        $result = false;
+    }
+    return $result;
+}
+
+
+
+function match($conn, $username, $email, $phone, $itemname, $seller, $bid) {
+    $sql = "INSERT INTO meeting (usersName, usersEmail, usersPhone, itemName, usersBid, seller) VALUES ( ?, ?, ?, ?, ?, ?) ;";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../listing.php?error=stmtfailed2");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "ssssss", $username, $email, $phone, $itemname, $bid, $seller);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    
+    // Close connection
+    mysqli_close($link);
+    header("location: ../listing.php?error=none");
+    exit();
+}

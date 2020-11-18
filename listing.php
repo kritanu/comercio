@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Items</title>
+    <title>Listings</title>
     <link rel = "icon" href =
     "https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg"
     type = "image/x-icon"> 
@@ -39,15 +39,20 @@
         // output data of each row
         while($row = mysqli_fetch_assoc($result)) {
             echo "<h3>" . $row["itemName"] ." - ₹" . $row["itemPrice"]."</h3>" . $row["itemDesc"]."<br>";
-            echo "<form action='listing.inc.php' method='post'>
+            echo "<form action='includes/listing.inc.php' method='post'>
             <label for='bid'>Your Bid:</label><br>
             <input type='text' id='bid' name='bid' size='6'>
             <input type='hidden' name='username' value=" . $_SESSION['username'] . ">
             <input type='hidden' name='email'  value=" . $_SESSION['email'] . ">
             <input type='hidden' name='phone'  value=" . $_SESSION['phone'] . ">
+            <input type='hidden' name='itemname'  value=" . $row["itemName"] . ">
             <input type='hidden' name='seller'  value=" . $row["usersName"] . ">"
-            . "<input type='submit' value='Buy'></form><br>";
-            
+            . "<input type='submit' name='submit' value='Buy'></form>";
+            if(isset($_GET["error"])) {
+                if($_GET["error"] == "emptyinput") {
+                    echo "<p> Place a bid!</p><br>";
+                }
+            }
         }
         } else {
         echo "0 results";
