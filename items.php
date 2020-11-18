@@ -55,6 +55,32 @@
             </div>
         </form>
     </div>
+    <br><br>
+    <!-- Footer -->
+    <footer>
+    <div class="container-fluid padding">
+    <div class="row text-center">
+        <div class="col-md-6">
+            <hr class="light">
+            <h5>Meeting Points</h5>
+            <hr class="light">
+            <p>M1 - UB Red Pipe</p>
+            <p>M2 - Clock Tower</p>
+            <p>M3 - Java Entry</p>
+            <p>M4 - Tech Park Stairs</p>
+        </div>
+        <div class="col-md-6">
+            <hr class="light">
+            <img src="https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg" width="30" height="30" alt="">
+            <hr class="light">
+            <p>+91 7977982445</p>
+            <p>kritanu82@gmail.com</p>
+            <p>SRM Univ, Kattankulathur</p>
+            <p>Chennai 603203</p>
+        </div>
+    </div>
+    </div>
+    </footer>
 
 </body>
 </html>

@@ -19,5 +19,31 @@
 </head>
 <body>
 
+    <div class="container">
+        <div class="header">
+            <h2>Listings</h2>
+        </div>
+        <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'comercio');
+        // Check connection
+        if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $sql = "SELECT * FROM item SORT ORDER BY itemId DESC";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            echo $row["itemName"]. " -- " . $row["itemDesc"]. " $" . $row["itemPrice"]. "<br>";
+        }
+        } else {
+        echo "0 results";
+        }
+
+        mysqli_close($conn);
+    ?>
+    </div>
 </body>
 </html>
