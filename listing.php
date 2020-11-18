@@ -47,7 +47,7 @@
             <input type='hidden' name='phone'  value=" . $_SESSION['phone'] . ">
             <input type='hidden' name='itemname'  value=" . $row["itemName"] . ">
             <input type='hidden' name='seller'  value=" . $row["usersName"] . ">"
-            . "<input type='submit' name='submit' value='Buy'></form>";
+            . "<input type='submit' name='submit' value='Offer'></form>";
             if(isset($_GET["error"])) {
                 if($_GET["error"] == "emptyinput") {
                     echo "<p> Place a bid!</p><br>";

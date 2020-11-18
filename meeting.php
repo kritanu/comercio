@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Items</title>
+    <title>My Meetings</title>
     <link rel = "icon" href =
     "https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg"
     type = "image/x-icon"> 
@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class="container" style="width:600px;">
-        <div class="header"><h2>Meetings</h2></div>
+        <div class="header"><h1>My Meetings</h1></div>
         <br>
         <div class='text-center'>
         <?php
@@ -35,14 +35,24 @@
 
         if (mysqli_num_rows($result) > 0) {
         // output data of each row
+        
         while($row = mysqli_fetch_assoc($result)) {
             if ($user == $row['seller']) {
-                echo "<h4> Item: " . $row["itemName"] . "<br>"
-                . "Users Bid: " . $row["usersBid"]. "<br>" 
+                echo "<h3> Offer Received </h3>";
+
+                echo "<h5> Item: " . $row["itemName"] . "<br>"
+                . "Users Bid: ₹" . $row["usersBid"]. "<br>" 
                 . "User: " . $row["usersName"] ."<br>" 
                 . "Mob: +91 " . $row["usersPhone"]. "<br>" 
-                . "Email: " . $row["usersEmail"]. "</h4>".
+                . "Email: " . $row["usersEmail"]. "</h5>".
                 "Meeting Point: M" . (fmod($row["meetingPoint"], 4)+1) . "<br><br>";
+            }
+            if ($user == $row['usersName']) {
+
+                echo "<h3> Offer Sent </h3>";
+
+                echo "<h5> Item: " . $row["itemName"] . "<br>"
+                . "Your Bid: ₹" . $row["usersBid"]. "<br><br>";
             }
         }
         } else {

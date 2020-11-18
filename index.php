@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comercio PHP</title>
+    <title>Comercio SRM</title>
     <link rel = "icon" href =
     "https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg"
     type = "image/x-icon"> 
@@ -78,13 +78,14 @@
     <div class="container-fluid padding">
         <div class="row padding">
             <!-- <div class="creator-padding"> -->
-            <div class="col-lg-6">
+            <div class="col-lg-6 text-center">
+            <br><br>
                 <h2 class="center">The Creator</h2>
                 <p class="center">A penultimate year software engineering student of SRM Institute of Science and Technology. Apart from academics, his hobbies include cooking, competitive sports and gaming.</p>
             <!-- </div> -->
             </div>
             <div class="col-lg-6">
-                <img src="img/face.jpg" class="img-fluid center img-border">
+                <img src="img/face.jpg" class="img-fluid center img-border ">
             </div>
         </div>
     </div>
