@@ -120,6 +120,9 @@ function loginUser($conn, $username, $password) {
         session_start();
         $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["username"] = $uidExists["usersName"];
+        $_SESSION["email"] = $uidExists["usersEmail"];
+        $_SESSION["phone"] = $uidExists["usersPhone"];
+
         header("location: ../index.php");
         exit();
     }

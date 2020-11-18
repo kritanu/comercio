@@ -20,39 +20,23 @@
 <body>
     <div class="container">
         <div class="header"><h2>
-        <?php
-            echo $_SESSION['username'] . "'s Account";
-        ?>
+        <?php echo $_SESSION['username'] . "'s Account";?>
         </h2>
         </div>
+        <br>
         <div class='text-center'>
-        
-        </div>
-        <form id="form" class="reg-form" action="includes/items.inc.php" method="post">
+        <form id="form" class="user-form">
             <div class="form-control">
-                <label for="username">Item Name</label>
-                <input type="text" placeholder="ITEM" id="itemname" name="itemname" />
-                <small>Error message</small>
+                <label for="username">Username : <?php echo $_SESSION['username'];?> </label>
+                <br>
             </div>
             <div class="form-control">
-                <label for="email">Item Description</label>
-                <input type="text" placeholder="ABC 123 XYZ" id="itemdesc" name="itemdesc" />
-                <small>Error message</small>
+                <label for="email">Email : <?php echo $_SESSION['email'];?> </label>
+                <br>
             </div>
-            <input type="hidden" name="usr"  value="<?php echo $_SESSION['username']; ?>">
-            <button type="submit" name="submit">Add Item</button>
-            <br>
-            <div class='text-center'>
-            <?php
-                if(isset($_GET["error"])) {
-                    if($_GET["error"] == "emptyinput") {
-                        echo "<p> Fill all the fields!</p>";
-                    }
-                    if($_GET["error"] == "none") {
-                        echo "<p>Successfully Added.</p>";
-                    }
-                }
-            ?>
+            <div class="form-control">
+                <label for="phone">Phone : +91 <?php echo $_SESSION['phone'];?> </label>
+                <br>
             </div>
         </form>
     </div>

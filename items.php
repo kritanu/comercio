@@ -22,7 +22,7 @@
         <div class="header"><h2>Add Item</h2></div>
         <form id="form" class="reg-form" action="includes/items.inc.php" method="post">
             <div class="form-control">
-                <label for="username">Item Name</label>
+                <label>Item Name</label>
                 <input type="text" placeholder="ITEM" id="itemname" name="itemname" />
                 <small>Error message</small>
             </div>
