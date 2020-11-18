@@ -27,16 +27,30 @@
                 <small>Error message</small>
             </div>
             <div class="form-control">
-                <label for="email">Item Description</label>
+                <label>Item Description</label>
                 <input type="text" placeholder="ABC 123 XYZ" id="itemdesc" name="itemdesc" />
                 <small>Error message</small>
             </div>
-            <input type="hidden" name="usr"  value="<?php echo $_SESSION['username']; ?>">
+            <div class="form-control">
+                <label>Item Price</label>
+                <input type="text" placeholder="₹₹₹" id="itemprice" name="itemprice" />
+                <small>Error message</small>
+            </div>
+            <input type="hidden" name="username"  value="<?php echo $_SESSION['username']; ?>">
+            <input type="hidden" name="email"  value="<?php echo $_SESSION['email']; ?>">
+            <input type="hidden" name="phone"  value="<?php echo $_SESSION['phone']; ?>">
             <button type="submit" name="submit">Add Item</button>
             <br>
             <div class='text-center'>
             <?php
-                echo 'ADD AS ' . $_SESSION['username'];
+                if(isset($_GET["error"])) {
+                    if($_GET["error"] == "emptyinput") {
+                        echo "<p> Fill all the fields!</p>";
+                    }
+                    if($_GET["error"] == "none") {
+                        echo "<p>Successfully Added.</p>";
+                    }
+                }
             ?>
             </div>
         </form>

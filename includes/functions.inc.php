@@ -141,14 +141,14 @@ function emptyInputItem($itemname, $itemdesc) {
 }
 
 
-function addItem($conn, $username, $itemname, $itemdesc) {
-    $sql = "INSERT INTO item ( usersName, itemName, itemDesc) VALUES ( ?, ?, ?) ;";
+function addItem($conn, $username, $email, $phone, $itemname, $itemdesc, $itemprice) {
+    $sql = "INSERT INTO item ( usersName, usersEmail, usersPhone, itemName, itemDesc, itemPrice) VALUES ( ?, ?, ?, ?, ?, ?) ;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../items.php?error=stmtfailed2");
         exit();
     }
-    mysqli_stmt_bind_param($stmt, "sss", $username, $itemname, $itemdesc);
+    mysqli_stmt_bind_param($stmt, "ssssss", $username, $email, $phone, $itemname, $itemdesc, $itemprice);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     

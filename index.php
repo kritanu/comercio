@@ -29,7 +29,7 @@
                         echo "<h1 class='display-2'>Welcome</h1>";
                         echo $_SESSION['username'] ."<br><br>";
                         echo "<button type='button' class='btn btn-outline-light btn-lg'><a href='items.php'>Add Item</a></button><br><br>";
-                        echo "<button type='button' class='btn btn-outline-light btn-lg'><a href='listing.php'>Check Listings</a></button><br><br>";
+                        echo "<button type='button' class='btn btn-outline-light btn-lg'><a href='listing.php'>View Listings</a></button><br><br>";
                       }
                     else {
                         echo "<h1 class='display-2'>Comercio</h1><br>";

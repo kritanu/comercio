@@ -4,19 +4,21 @@ if(isset($_POST["submit"])) {
     
     $itemname = $_POST["itemname"];
     $itemdesc = $_POST["itemdesc"];
-    $username = $_POST["usr"];
-
+    $itemprice = $_POST["itemprice"];
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
     include_once 'dbh.inc.php';
     include_once 'functions.inc.php';
 
 
 
-    if(emptyInputItem($username, $itemname, $itemdesc) !== false) {
+    if(emptyInputItem($itemname, $itemdesc, $itemprice) !== false) {
        header("location: ../items.php?error=emptyinput");
        exit();
     }
 
-    addItem($conn, $username, $itemname, $itemdesc);
+    addItem($conn, $username, $email, $phone, $itemname, $itemdesc, $itemprice);
 
 }
 
