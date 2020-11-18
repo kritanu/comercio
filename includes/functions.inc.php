@@ -1,6 +1,6 @@
 <?php
 
-include_once dbh.inc.php;
+include_once 'dbh.inc.php';
 
 function emptyInputRegistration($username, $email, $phone, $password, $password2) {
     $result;
@@ -131,4 +131,34 @@ function loginUser($conn, $username, $password) {
         header("location: ../index.php");
         exit();
     }
+}
+
+
+function emptyInputItem($itemname, $itemdesc) {
+    $result;
+    if(empty($itemname) || empty($itemdesc)) {
+        $result = true;
+    }
+    else {
+        $result = false;
+    }
+    return $result;
+}
+
+
+function addItem($conn, $username, $itemname, $itemdesc) {
+    $sql = "INSERT INTO item (usersName, itemName, itemDesc) VALUES (?, ?, ?) ;";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../items.php?error=stmtfailed2");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "sss", $username, $itemname, $itemdesc);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    
+    // Close connection
+    mysqli_close($link);
+    header("location: ../items.php?error=none");
+    exit();
 }

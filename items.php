@@ -18,6 +18,35 @@
     <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
 </head>
 <body>
+    <div class="container">
+        <div class="header"><h2>Add Item</h2></div>
+        <form id="form" class="reg-form" action="includes/items.inc.php" method="post">
+            <div class="form-control">
+                <label for="username">Item Name</label>
+                <input type="text" placeholder="ITEM" id="itemname" name="itemname" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Item Description</label>
+                <input type="text" placeholder="ABC 123 XYZ" id="itemdesc" name="itemdesc" />
+                <small>Error message</small>
+            </div>
+            <button type="submit" name="submit">Add Item</button>
+            <br>
+            <div class='text-center'>
+            <?php
+                if(isset($_GET["error"])) {
+                    if($_GET["error"] == "emptyinput") {
+                        echo "<p> Fill all the fields!</p>";
+                    }
+                    if($_GET["error"] == "none") {
+                        echo "<p>Successfully Added.</p>";
+                    }
+                }
+            ?>
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>

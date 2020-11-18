@@ -35,11 +35,11 @@
                 <small>Error message</small>
             </div>
             <button type="submit" name="submit">Login</button>
-            <p class="message"> New User? <a href='#'>Register</a></p>
-            <div>
+            <p class="message"> New User? <a href='registration.php'>Register</a></p>
+            <div class='text-center'>
             <?php
                 if(isset($_GET["error"])) {
-                    if($_GET["error"] == "emptyinputfunc") {
+                    if($_GET["error"] == "emptyinput") {
                         echo "<p> Fill the fields!</p>";
                     }
                     if($_GET["error"] == "wronglogin") {

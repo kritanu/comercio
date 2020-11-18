@@ -47,9 +47,9 @@ include_once 'header.php';
                 <small>Error message</small>
             </div>
             <button type="submit" name="submit">Create Account</button>
-            <p class="message"> Already Registered? <a href='#'>Login</a></p>
+            <p class="message"> Already Registered? <a href='login.php'>Login</a></p>
             <br>
-            <div>
+            <div class='text-center'>
             <?php
                 if(isset($_GET["error"])) {
                     if($_GET["error"] == "emptyinput") {

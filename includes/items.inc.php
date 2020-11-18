@@ -8,9 +8,7 @@ if(isset($_POST["submit"])) {
     include_once 'dbh.inc.php';
     include_once 'functions.inc.php';
 
-    $username = $_SESSION["username"];
-
-    if(emptyInputItem($username, $itemname, $itemdesc) !== false) {
+    if(emptyInputItem($itemname, $itemdesc) !== false) {
        header("location: ../items.php?error=emptyinput");
        exit();
     }
