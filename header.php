@@ -18,16 +18,12 @@
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="items.php">Items</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="services.php">Services</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact Us</a>
                 </li>
                 <?php
                   if (isset($_SESSION["username"])) {
+                    echo "<li class='nav-item'><a class='nav-link' href='items.php'>Add</a></li>";
+                    echo "<li class='nav-item'><a class='nav-link' href='listing.php'>Listings</a></li>";
                     echo "<li class='nav-item'><a class='nav-link' href='profile.php'>Profile</a></li>";
                     echo "<li class='nav-item'><a class='nav-link' href='includes/logout.inc.php'>Log Out</a></li>";
                   }
