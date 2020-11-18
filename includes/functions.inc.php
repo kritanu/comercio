@@ -129,9 +129,9 @@ function loginUser($conn, $username, $password) {
 }
 
 
-function emptyInputItem($itemname, $itemdesc) {
+function emptyInputItem($itemname, $itemdesc, $itemprice) {
     $result;
-    if(empty($itemname) || empty($itemdesc)) {
+    if(empty($itemname) || empty($itemdesc) || empty($itemprice)) {
         $result = true;
     }
     else {
