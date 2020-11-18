@@ -82,14 +82,6 @@ function createUser($conn, $username, $email, $phone, $password) {
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    // Attempt insert query execution
-    $sql = "INSERT INTO persons (first_name, last_name, email) VALUES ('Peter', 'Parker', 'peterparker@mail.com')";
-    if(mysqli_query($link, $sql)){
-        echo "Records inserted successfully.";
-    } else{
-        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-    }
-    
     // Close connection
     mysqli_close($link);
     header("location: ../registration.php?error=none");
@@ -147,7 +139,7 @@ function emptyInputItem($itemname, $itemdesc) {
 
 
 function addItem($conn, $username, $itemname, $itemdesc) {
-    $sql = "INSERT INTO item (usersName, itemName, itemDesc) VALUES (?, ?, ?) ;";
+    $sql = "INSERT INTO item ( usersName, itemName, itemDesc) VALUES ( ?, ?, ?) ;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../items.php?error=stmtfailed2");

@@ -37,13 +37,14 @@
             <button type="submit" name="submit">Login</button>
             <p class="message"> New User? <a href='registration.php'>Register</a></p>
             <div class='text-center'>
+            <br>
             <?php
                 if(isset($_GET["error"])) {
                     if($_GET["error"] == "emptyinput") {
                         echo "<p> Fill the fields!</p>";
                     }
                     if($_GET["error"] == "wronglogin") {
-                        echo "<p>Incorrect Login.</p>";
+                        echo "<p>User not registered.</p>";
                     }
                     if($_GET["error"] == "incorrectpass") {
                         echo "<p>Incorrect Password.</p>";

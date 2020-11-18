@@ -68,7 +68,7 @@ include_once 'header.php';
                         echo "<p> Something went wrong.</p>";
                     }
                     if($_GET["error"] == "usernametaken") {
-                        echo "<p> This user in already registered.</p>";
+                        echo "<p> This user is already registered.</p>";
                     }
                     if($_GET["error"] == "none") {
                         echo "<p>Successfully Registered.</p>";

@@ -31,18 +31,12 @@
                 <input type="text" placeholder="ABC 123 XYZ" id="itemdesc" name="itemdesc" />
                 <small>Error message</small>
             </div>
+            <input type="hidden" name="usr"  value="<?php echo $_SESSION['username']; ?>">
             <button type="submit" name="submit">Add Item</button>
             <br>
             <div class='text-center'>
             <?php
-                if(isset($_GET["error"])) {
-                    if($_GET["error"] == "emptyinput") {
-                        echo "<p> Fill all the fields!</p>";
-                    }
-                    if($_GET["error"] == "none") {
-                        echo "<p>Successfully Added.</p>";
-                    }
-                }
+                echo 'ADD AS ' . $_SESSION['username'];
             ?>
             </div>
         </form>
