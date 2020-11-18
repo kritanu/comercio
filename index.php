@@ -23,12 +23,11 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="img/srm-univ.jpg" width="100%" height= auto alt="">
-            <div class="carousel-caption">
+            <div class="carousel-caption" style="font-size:12px">
                 <?php
                     if (isset($_SESSION["username"])) {
-                        echo "<h1 class='display-2'>Welcome</h1>";
-                        echo $_SESSION['username'] ."<br><br>";
-                        echo "<button type='button' class='btn btn-outline-light btn-lg'><a href='items.php'>Add Item</a></button><br><br>";
+                        echo "<h1 class='display-2'>Welcome " . $_SESSION['username'] . "</h1>";
+                        echo "<button type='button' class='btn btn-outline-light btn-lg'><a href='items.php'>Add Item</a></button>" . "   ";
                         echo "<button type='button' class='btn btn-outline-light btn-lg'><a href='listing.php'>View Listings</a></button><br><br>";
                       }
                     else {
