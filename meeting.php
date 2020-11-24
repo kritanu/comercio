@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class="container" style="width:600px;">
-        <div class="header"><h1>My Meetings</h1></div>
+        <div class="header"><h1>Offers</h1></div>
         <br>
         <div class='text-center'>
         <?php
@@ -38,8 +38,7 @@
         
         while($row = mysqli_fetch_assoc($result)) {
             if ($user == $row['seller']) {
-                echo "<h3> Offer Received </h3>";
-
+                echo "<h4> Meeting Offer </h4>";
                 echo "<h5> Item: " . $row["itemName"] . "<br>"
                 . "Users Bid: ₹" . $row["usersBid"]. "<br>" 
                 . "User: " . $row["usersName"] ."<br>" 
@@ -49,10 +48,9 @@
             }
             if ($user == $row['usersName']) {
 
-                echo "<h3> Offer Sent </h3>";
-
+                echo "<h4> Offer Sent </h4>";
                 echo "<h5> Item: " . $row["itemName"] . "<br>"
-                . "Your Bid: ₹" . $row["usersBid"]. "<br><br>";
+                . "Your Bid: ₹" . $row["usersBid"]. "</h5><br>";
             }
         }
         } else {

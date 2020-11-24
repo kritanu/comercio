@@ -19,9 +19,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="header"><h2>
+        <div class="header"><h1>
         <?php echo $_SESSION['username'] . "'s Account";?>
-        </h2>
+        </h1>
         </div>
         <br>
         <div class='text-center'>

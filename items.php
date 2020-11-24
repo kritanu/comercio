@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Items</title>
+    <title>Add Items/ SVs</title>
     <link rel = "icon" href =
     "https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg"
     type = "image/x-icon"> 
@@ -19,27 +19,27 @@
 </head>
 <body>
     <div class="container" style="width:600px;">
-        <div class="header"><h2>Add Item</h2></div>
+        <div class="header"><h1>Add Item/ Services</h1></div>
         <form id="form" class="reg-form" action="includes/items.inc.php" method="post">
             <div class="form-control">
-                <label>Item Name</label>
-                <input type="text" placeholder="ITEM" id="itemname" name="itemname" />
+                <label>Item/ SV Name</label>
+                <input type="text" placeholder="Item/ SV" id="itemname" name="itemname" />
                 <small>Error message</small>
             </div>
             <div class="form-control">
-                <label>Item Description</label>
-                <input type="text" placeholder="ABC 123 XYZ" id="itemdesc" name="itemdesc" />
+                <label>Item/ SV Description</label>
+                <input type="text" placeholder="Describe it..." id="itemdesc" name="itemdesc" />
                 <small>Error message</small>
             </div>
             <div class="form-control">
-                <label>Item Price</label>
+                <label>Item/ SV Price</label>
                 <input type="text" placeholder="₹₹₹" id="itemprice" name="itemprice" />
                 <small>Error message</small>
             </div>
             <input type="hidden" name="username"  value="<?php echo $_SESSION['username']; ?>">
             <input type="hidden" name="email"  value="<?php echo $_SESSION['email']; ?>">
             <input type="hidden" name="phone"  value="<?php echo $_SESSION['phone']; ?>">
-            <button type="submit" name="submit">Add Item</button>
+            <button type="submit" name="submit">Add Item/ SV</button>
             <br>
             <div class='text-center'>
             <?php
@@ -55,7 +55,6 @@
             </div>
         </form>
     </div>
-    <br><br>
     <!-- Footer -->
     <footer>
     <div class="container-fluid padding">

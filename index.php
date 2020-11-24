@@ -7,9 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comercio SRM</title>
-    <link rel = "icon" href =
-    "https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg"
-    type = "image/x-icon"> 
+    <link rel = "icon" href = "https://library.kissclipart.com/20180902/avw/kissclipart-letter-c-logo-design-clipart-graphic-design-logo-eae34485f5130c7a.jpg" type = "image/x-icon"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -27,7 +25,7 @@
                 <?php
                     if (isset($_SESSION["username"])) {
                         echo "<h1 class='display-2'>Welcome " . $_SESSION['username'] . "</h1>";
-                        echo "<button type='button' class='btn btn-outline-light btn-lg'><a href='items.php'>Add Item</a></button>" . "   ";
+                        echo "<button type='button' class='btn btn-outline-light btn-lg'><a href='items.php'>Add Item/ SV</a></button>" . "   ";
                         echo "<button type='button' class='btn btn-outline-light btn-lg'><a href='listing.php'>View Listings</a></button><br><br>";
                       }
                     else {

@@ -58,11 +58,15 @@
             <!-- <div class="creator-padding"> -->
             <div class="col-lg-6 text-center">
                 <h2 class="center">The Creator</h2>
+                <br>
                 <p class="center">A penultimate year software engineering student of SRM Institute of Science and Technology. Apart from academics, his hobbies include cooking, competitive sports and gaming.</p>
             </div>
             <div class="col-lg-6 text-center">
                 <h2 class="center">The Vision</h2>
-                <p class="center">A penultimate year software engineering student of SRM Institute of Science and Technology. Apart from academics, his hobbies include cooking, competitive sports and gaming.</p>
+                <br>
+                <p class="center">Help the ones in need.</p>
+                <p class="center">Reduce plastics and generating wastes.</p>
+                <p class="center">Save the World.</p>
             </div>
         </div>
     </div>
